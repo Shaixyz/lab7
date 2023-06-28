@@ -8,7 +8,7 @@ export default function Detail() {
     console.log(userName);
 
     async function getData() {
-        await axios.get("https://636e5f7f182793016f3efdb3.mockapi.io/FPT/" + userName.id)
+        await axios.get("https://649c5abc04807571923803ad.mockapi.io/FPT/" + userName.id)
             .then(response => response.data)
             .then((data) => {
                 setNewsList(data)
