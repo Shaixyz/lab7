@@ -4,7 +4,7 @@ export default function Contact() {
     return (
         <div className="App"> 
 
-        {/* Văn Mẫu 1 */}
+        {/* Script 1 */}
         <Typography gutterBottom variant="h3" align="center">
          </Typography>
         <Grid>
@@ -43,7 +43,7 @@ export default function Contact() {
           </Card>
         </Grid>
 
-        {/* Văn Mẫu 2 */}
+        {/* Script 2 */}
         
       </div>
     )
