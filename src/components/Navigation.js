@@ -36,7 +36,7 @@ export default function Navigation() {
   return (
     <div className="Naviagation">
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" style={{ background: "red" }}>
+        <AppBar position="static" style={{ background: "#f05123" }}>
           <Toolbar>
             <Link to="/">
               <img

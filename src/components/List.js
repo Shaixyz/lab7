@@ -9,7 +9,7 @@ export default function List(F) {
             {F.F.map((f, index) => (
               f.actractive == true && (
               <Col s={12} m={6} l={4} key={index}>
-                <div style={{ background: "blue" }} className="card">
+                <div style={{ background: "	rgb(245,245,220)" }} className="card">
                   <div className="card-image">
                     <img src={f.img} alt={f.title} />
                   </div>
@@ -17,7 +17,7 @@ export default function List(F) {
                     <div className="card-content">{f.descrition}</div>
                   <Link to={`/detail/${f.id}`}>
                     <div className="card-action">
-                      <Button>Detail</Button>
+                      <Button>Read More</Button>
                     </div>
                   </Link>
                 </div>

@@ -24,7 +24,7 @@ export default function Detail() {
       <div className="container">
         <div className="row">
             <div className="col-12">
-                <div className="card" style={{background: 'green'}}>
+                <div className="card" style={{background: '	rgb(245,245,220)'}}>
                     <div>
                         <img src={newsList.img} style={{width: '100%'}} className="card-img-top" alt="..." />
                     </div>

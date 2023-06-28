@@ -23,7 +23,7 @@ export default function Login() {
 
   return (
     <div>
-      <h1 style={{color: 'white'}}>Login to Huy</h1>
+      <h1 style={{color: 'white'}}>Login to your google account</h1>
       <div style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}>
         <GoogleButton onClick={handleGoogleSignIn}/>
       </div>
