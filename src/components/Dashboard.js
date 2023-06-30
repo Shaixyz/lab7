@@ -23,7 +23,7 @@ export default function Dashboard() {
     await callApi("FPT/" + id, "DELETE", null).then(res => {
       console.log(res);
     });
-    window.location.reload();
+    setNewsList(prevList => prevList.filter(news => news.id !== id));
   }
 
   return (
@@ -36,25 +36,25 @@ export default function Dashboard() {
       </Link>
       <Table style={{ backgroundColor: "aliceblue", marginBottom: "20px" }}>
         <TableHead>
-          <TableRow>
-            <TableCell>ID</TableCell>
-            <TableCell>IMG</TableCell>
-            <TableCell>Title</TableCell>
-            <TableCell>Description</TableCell>
-            <TableCell>Status</TableCell>
-            <TableCell>Views</TableCell>
-            <TableCell>Content</TableCell>
-            <TableCell>Attractive</TableCell>
-            <TableCell>Action</TableCell>
+          <TableRow style={{backgroundColor:"#FFA07A"}}>
+            <TableCell style={{ fontWeight: "bold" }}>ID</TableCell>
+            <TableCell style={{ fontWeight: "bold" }}>IMG</TableCell>
+            <TableCell style={{ fontWeight: "bold" }}>Title</TableCell>
+            <TableCell style={{ fontWeight: "bold" }}>Description</TableCell>
+            <TableCell style={{ fontWeight: "bold" }}>Status</TableCell>
+            <TableCell style={{ fontWeight: "bold" }}>Views</TableCell>
+            <TableCell style={{ fontWeight: "bold" }}>Content</TableCell>
+            <TableCell style={{ fontWeight: "bold" }}>Attractive</TableCell>
+            <TableCell style={{ fontWeight: "bold" }}>Action</TableCell>
           </TableRow>
         </TableHead>
-        {newsList.map((news, index) => (
-          <TableBody key={index}>
-            <TableRow>
+        <TableBody>
+          {newsList.map((news, index) => (
+            <TableRow key={index}>
               <TableCell>{news.id}</TableCell>
               <TableCell>
                 <img
-                  style={{ width: "200px", height: "200px" }}
+                  style={{ width: "200px", height: "200px", borderRadius:"100px" }}
                   src={news.img}
                   alt=""
                 />
@@ -78,16 +78,14 @@ export default function Dashboard() {
                       Edit
                     </Button>
                   </Link>
-                  <Link to={`/${news.id}/edit`}>
-                    <Button variant="contained" color="primary" onClick={() => deleteData(news.id)}>
-                      Delete
-                    </Button>
-                  </Link>
+                  <Button variant="contained" color="primary" onClick={() => deleteData(news.id)}>
+                    Delete
+                  </Button>
                 </div>
               </TableCell>
             </TableRow>
-          </TableBody>
-        ))}
+          ))}
+        </TableBody>
       </Table>
     </div>
   );

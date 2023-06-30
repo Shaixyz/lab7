@@ -121,7 +121,7 @@ export default function Edit() {
                     {formik.errors.views && formik.touched.views && (<p style={{color: 'red'}}>{formik.errors.views}</p>)}
 
                     <div className="form-group">
-                        <label htmlFor="actractive">Actractive</label>
+                        <label htmlFor="actractive">Attractive</label>
                         <input type="text" className="form-control" id="actractive" value={formik.values.actractive} onChange={formik.handleChange} placeholder="Enter actractive" />
                     </div>
                     {formik.errors.actractive && formik.touched.actractive && (<p style={{color: 'red'}}>{formik.errors.actractive}</p>)}
